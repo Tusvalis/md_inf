@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Ievieto pirmo un otro ciparu");
+        double a = scan.nextInt();
+        double b = scan.nextInt();
+
+        System.out.println("Izvēlies vienu no darbībām - (add(+), subtract(-), multiply(*), divide(/))");
+        double cd = scan.next().charAt(0);
+        solve(a, b, cd);
+    }
+
+        public static void solve( double a, double b, double cd){
+            double ans = 0;
+
+            if (cd == '+') {
+                ans = a + b;
+            } else if (cd == '-') {
+                ans = a - b;
+            } else if (cd == '*') {
+                ans = a * b;
+            } else if (cd == '/') {
+                ans = a / b;
+            }
+
+            System.out.println("=" + ans);
+
+        }
+    }
